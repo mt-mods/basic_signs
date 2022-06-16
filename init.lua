@@ -6,8 +6,7 @@ basic_signs.path = minetest.get_modpath(minetest.get_current_modname())
 
 dofile(basic_signs.path .. "/crafting.lua")
 
-local S, NS = dofile(basic_signs.path .. "/intllib.lua")
-basic_signs.gettext = S
+local S = minetest.get_translator(minetest.get_current_modname())
 
 signs_lib.register_sign("basic_signs:sign_wall_locked", {
 	description = S("Locked Sign"),
